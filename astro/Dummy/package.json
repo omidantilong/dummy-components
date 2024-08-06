@@ -1,0 +1,31 @@
+{
+  "name": "@omidantilong/dummy-astro-package",
+  "version": "0.0.1",
+  "description": "it's a dummy astro package init",
+  "main": "Dummy.astro",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/omidantilong/dummy-components.git"
+  },
+  "author": "omidantilong",
+  "license": "ISC",
+  "peerDependencies": {
+    "astro": "^4.13.1"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/omidantilong/dummy-components/issues"
+  },
+  "homepage": "https://github.com/omidantilong/dummy-components#readme"
+}

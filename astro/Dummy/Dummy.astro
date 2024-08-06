@@ -1,0 +1,22 @@
+---
+interface Props {
+  data: {
+    title: string
+  }
+}
+
+//import LinkWrapper from "../LinkWrapper/LinkWrapper.astro"
+
+//import { parse } from "../../util/markdown"
+
+const { title } = Astro.props.data
+
+//const parsed = await parse(cardBody)
+---
+<div>
+  <p>{title}</p>
+</div>
+
+<!-- <style>
+  @import "./EditorialCard.scss";
+</style> -->
