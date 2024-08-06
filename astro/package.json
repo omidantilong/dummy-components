@@ -1,15 +1,23 @@
 {
-  "name": "@omidantilong/dummy-astro-package",
-  "version": "0.0.1",
+  "name": "@omidantilong/astro",
+  "version": "0.0.3",
   "description": "it's a dummy astro package init",
-  "main": "Dummy.astro",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.ts"
+    },
+    "./*": {
+      "import": "./lib/*/*.astro",
+      "types": "./lib/*/*.d.ts"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
   "private": false,
   "files": [
-    "dist",
-    "src"
+    "lib"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,7 +31,6 @@
   "peerDependencies": {
     "astro": "^4.13.1"
   },
-  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/omidantilong/dummy-components/issues"
   },
