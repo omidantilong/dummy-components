@@ -30,14 +30,14 @@
   },
   "author": "omidantilong",
   "license": "ISC",
+  "dependencies": {
+    "@omidantilong/styles": "^0.0.1"
+  },
   "peerDependencies": {
     "astro": "^4.13.1"
   },
   "bugs": {
     "url": "https://github.com/omidantilong/dummy-components/issues"
   },
-  "homepage": "https://github.com/omidantilong/dummy-components#readme",
-  "dependencies": {
-    "@omidantilong/styles": "^0.0.1"
-  }
+  "homepage": "https://github.com/omidantilong/dummy-components#readme"
 }

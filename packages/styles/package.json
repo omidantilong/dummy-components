@@ -18,12 +18,12 @@
   },
   "author": "omidantilong",
   "license": "ISC",
+  "dependencies": {},
   "peerDependencies": {
     "sass": "^1.77.8"
   },
   "bugs": {
     "url": "https://github.com/omidantilong/dummy-components/issues"
   },
-  "homepage": "https://github.com/omidantilong/dummy-components#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/omidantilong/dummy-components#readme"
 }
