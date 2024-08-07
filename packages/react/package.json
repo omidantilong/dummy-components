@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "it's a dummy react package init",
   "type": "module",
   "exports": {
@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/omidantilong/dummy-components#readme",
   "dependencies": {
+    "@omidantilong/styles": "^0.0.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
