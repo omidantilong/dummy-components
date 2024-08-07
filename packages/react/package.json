@@ -1,15 +1,14 @@
 {
   "name": "@omidantilong/react",
   "version": "0.0.1",
-  "description": "it's a dummy astro package init",
+  "description": "it's a dummy react package init",
   "type": "module",
   "exports": {
     ".": {
       "import": "./lib/index.ts"
     },
     "./*": {
-      "import": "./lib/*/*.tsx",
-      "types": "./lib/*/*.d.ts"
+      "import": "./lib/*/*.tsx"
     }
   },
   "publishConfig": {
@@ -34,5 +33,11 @@
   "bugs": {
     "url": "https://github.com/omidantilong/dummy-components/issues"
   },
-  "homepage": "https://github.com/omidantilong/dummy-components#readme"
+  "homepage": "https://github.com/omidantilong/dummy-components#readme",
+  "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }

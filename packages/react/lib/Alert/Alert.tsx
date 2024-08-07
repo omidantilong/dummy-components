@@ -1,7 +1,3 @@
-export default function Alert({text}: {text:string}) {
-
-  return (
-    <div class="alert-mcgert">{text}</div>
-  )
-
+export default function Alert({ text }: { text: string }) {
+  return <div className="alert-mcgert">{text}</div>
 }
