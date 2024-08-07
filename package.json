@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "fs-extra": "^11.2.0",
     "prettier": "^3.3.3"
   },
   "name": "dummy-components",
