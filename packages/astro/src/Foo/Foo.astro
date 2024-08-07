@@ -1,0 +1,12 @@
+---
+interface Props {
+  data: {
+    title: string
+  }
+}
+
+const { title } = Astro.props.data
+---
+<div>
+  <p>FOO FOO FOO{title}</p>
+</div>
