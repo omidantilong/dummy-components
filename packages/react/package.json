@@ -1,23 +1,17 @@
 {
   "name": "@omidantilong/react",
-  "version": "0.0.11",
+  "version": "0.0.15",
   "description": "it's a dummy react package init",
   "type": "module",
-  "module": "lib/index.ts",
-  "exports": {
-    ".": {
-      "import": "./lib/index.ts"
-    },
-    "./*": {
-      "import": "./lib/components/*/*.tsx"
-    }
-  },
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
   "publishConfig": {
     "access": "public"
   },
   "private": false,
   "files": [
-    "lib"
+    "cjs",
+    "esm"
   ],
   "scripts": {
     "build": "node scripts/build.js",
