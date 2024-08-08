@@ -1,6 +1,6 @@
 import fs from "fs-extra"
 ;(async () => {
-  const components = await fs.readdir("./src")
+  const components = await fs.readdir("./src/components")
 
   if (components.length) {
     await fs.emptyDir("./lib")
@@ -10,11 +10,14 @@ import fs from "fs-extra"
 
   for await (const component of components) {
     const typeDeclaration = `export default function ${component}(_props: import("./${component}.astro").Props): any`
-    const componentExport = `export { default as ${component} } from "./${component}/${component}.astro"`
+    const componentExport = `export { default as ${component} } from "./components/${component}/${component}.astro"`
 
-    await fs.mkdir(`./lib/${component}`)
-    await fs.copy(`./src/${component}/${component}.astro`, `./lib/${component}/${component}.astro`)
-    await fs.writeFile(`./lib/${component}/${component}.d.ts`, typeDeclaration)
+    await fs.mkdir(`./lib/components/${component}`)
+    await fs.copy(
+      `./src/components/${component}/${component}.astro`,
+      `./lib/components/${component}/${component}.astro`
+    )
+    await fs.writeFile(`./lib/components/${component}/${component}.d.ts`, typeDeclaration)
 
     componentIndex.push(componentExport)
   }

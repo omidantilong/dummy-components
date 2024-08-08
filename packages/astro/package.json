@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/astro",
-  "version": "0.0.9",
+  "version": "0.0.13",
   "description": "it's a dummy astro package init",
   "type": "module",
   "exports": {
