@@ -3,14 +3,7 @@
   "version": "0.0.2",
   "description": "it's a dummy react package init",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./lib/index.ts"
-    },
-    "./*": {
-      "import": "./lib/*/*.tsx"
-    }
-  },
+  "module": "lib/index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -19,6 +12,7 @@
     "lib"
   ],
   "scripts": {
+    "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +22,10 @@
   "author": "omidantilong",
   "license": "ISC",
   "dependencies": {
-    "@omidantilong/styles": "^0.0.1"
+    "@omidantilong/styles": "^0.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.20.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
