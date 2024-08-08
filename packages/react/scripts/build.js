@@ -10,12 +10,12 @@ async function build() {
   const formats = [
     {
       type: "esm",
-      outDir: "esm",
+      outDir: "lib",
     },
-    {
-      type: "commonjs",
-      outDir: "cjs",
-    },
+    // {
+    //   type: "commonjs",
+    //   outDir: "cjs",
+    // },
   ]
   for (const format of formats) {
     const { outDir, type } = format
