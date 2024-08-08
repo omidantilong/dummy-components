@@ -1,2 +1,2 @@
-export { default as Alert } from "./Alert"
-export { default as Card } from "./Card"
+export * from "./components/Alert"
+export * from "./components/Card"
