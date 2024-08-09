@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/astro",
-  "version": "0.0.13",
+  "version": "0.0.16",
   "description": "it's a dummy astro package init",
   "type": "module",
   "exports": {
@@ -8,8 +8,8 @@
       "import": "./lib/index.ts"
     },
     "./*": {
-      "import": "./lib/*/*.astro",
-      "types": "./lib/*/*.d.ts"
+      "import": "./lib/components/*/*.astro",
+      "types": "./lib/components/*/*.d.ts"
     }
   },
   "publishConfig": {

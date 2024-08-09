@@ -4,6 +4,7 @@ import fs from "fs-extra"
 
   if (components.length) {
     await fs.emptyDir("./lib")
+    await fs.ensureDir("./lib/components")
   }
 
   let componentIndex = []
@@ -22,8 +23,17 @@ import fs from "fs-extra"
     componentIndex.push(componentExport)
   }
 
-  const moduleDeclaration = `declare module "*"`
+  //const moduleDeclaration = `declare module "*"`
 
-  await fs.writeFile(`./lib/index.d.ts`, moduleDeclaration)
+  const tsConfig = {
+    extends: "astro/tsconfigs/strict",
+    compilerOptions: {
+      jsx: "preserve",
+    },
+  }
+
+  //await fs.writeFile(`./lib/index.d.ts`, moduleDeclaration)
+  await fs.copy("./env.d.ts", "./lib/env.d.ts")
+  await fs.writeFile(`./lib/tsconfig.json`, JSON.stringify(tsConfig))
   await fs.writeFile(`./lib/index.ts`, componentIndex.join("\n"))
 })()
