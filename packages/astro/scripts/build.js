@@ -1,5 +1,5 @@
 import fs from "fs-extra"
-;(async () => {
+async function build() {
   const components = await fs.readdir("./src/components")
 
   if (components.length) {
@@ -36,4 +36,9 @@ import fs from "fs-extra"
   await fs.copy("./env.d.ts", "./lib/env.d.ts")
   await fs.writeFile(`./lib/tsconfig.json`, JSON.stringify(tsConfig))
   await fs.writeFile(`./lib/index.ts`, componentIndex.join("\n"))
-})()
+}
+
+build().catch((error) => {
+  console.log(error)
+  process.exit(1)
+})
