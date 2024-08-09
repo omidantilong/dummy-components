@@ -1,6 +1,41 @@
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Modules
 node_modules
-**/lib
-**/css
-**/cjs
-**/esm
+
+# Logs
+npm-debug.log*
+lerna-debug.log*
+logs
+*.log
+
+# Dist 
+dist
+lib
+css
+cjs
+esm
+
+# Caches
+.sass-cache
+
+# Local
+*.local
+
+# Testing
+playwright-report
+test-results
+
+# Misc
 exports.json
+
+
