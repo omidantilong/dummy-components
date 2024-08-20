@@ -46,3 +46,16 @@ There is also a top-level `styles` package, which is a dependency of the framewo
 
 1. Bundle styles into the component directly, with no need to import CSS separately — check the Astro `Dummy` component for an example of this in practice
 2. Maintain complete separation and require engineers to import CSS into their pipeline(s) — this is how Carbon works, and it allows a greater degree of flexibility at the cost of slightly more overhead
+
+## Versioning
+
+Initially I assumed this would be handled with Lerna. I since discovered [Changesets](https://github.com/changesets/changesets) which seems like it might be a nice solution. It's used by the Astro core team (among many others). Using Changesets, the workflow would be:
+
+- Do all the work, either on main or in a branch
+- Run `npx changeset add`
+- Changesets will detect which packages have changes and ask how they should be versioned
+- A changeset file is created
+- Then we can run `npx changeset version` locally or in a pipeline to update package versions for all affected packages, including dependencies
+- Then `npx changeset publish` to publish the packages to NPM
+
+Changesets has an official Github action and a well maintained but third-party [Gitlab CI component](https://github.com/un-ts/changesets-gitlab).
