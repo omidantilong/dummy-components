@@ -59,3 +59,8 @@ Initially I assumed this would be handled with Lerna. I since discovered [Change
 - Then `npx changeset publish` to publish the packages to NPM
 
 Changesets has an official Github action and a well maintained but third-party [Gitlab CI component](https://github.com/un-ts/changesets-gitlab).
+
+## Other Versioning Tools
+
+- [NX Release](https://nx.dev/recipes/nx-release/automatically-version-with-conventional-commits) — untested, but looks it can handle conventional commits and do independent releases
+- [Auto](https://intuit.github.io/) — untested, less community support, not sure about this but could be worth a look
