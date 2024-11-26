@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/styles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "it's a dummy styles package init",
   "publishConfig": {
     "access": "public"
@@ -21,7 +21,6 @@
   },
   "author": "omidantilong",
   "license": "ISC",
-  "dependencies": {},
   "peerDependencies": {
     "sass": "^1.77.8"
   },
