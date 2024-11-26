@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/react",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "it's a dummy react package init",
   "type": "module",
   "main": "lib/index.js",
@@ -32,7 +32,6 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0"
   },
-  "peerDependencies": {},
   "bugs": {
     "url": "https://github.com/omidantilong/dummy-components/issues"
   },
