@@ -1,4 +1,4 @@
-import * as sass from "sass"
+import * as sass from "sass-embedded"
 import fs from "fs-extra"
 import path from "node:path"
 import { glob } from "glob"
