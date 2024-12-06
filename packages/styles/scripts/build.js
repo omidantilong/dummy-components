@@ -1,30 +1,34 @@
 import * as sass from "sass"
 import fs from "fs-extra"
-import path from "path"
+import path from "node:path"
+import { glob } from "glob"
 
 async function build() {
-  const inputs = [{ path: "./scss/main.scss", file: "main.scss" }]
   const loadPaths = [path.resolve("./node_modules")]
 
-  const files = await fs.readdir("./scss/components")
-
-  console.log(files)
   await fs.emptyDir("./css")
 
-  inputs.push(
-    ...files.map((file) => {
-      return { path: `./scss/components/${file}`, file: `components/${file}` }
-    })
-  )
+  const paths = await glob("scss/**/*.scss", {
+    ignore: {
+      ignored: (p) => p.name.startsWith("_"),
+    },
+  })
+
+  const inputs = paths.map((p) => {
+    return { path: p, dir: path.dirname(p), file: path.basename(p) }
+  })
+
   for (const input of inputs) {
-    console.log(input)
     const output = sass.compile(input.path, {
       //style: "compressed",
       sourceMap: false,
       loadPaths,
     })
 
-    await fs.outputFile(`./css/${input.file.replace("scss", "")}.css`, output.css)
+    const moduleDir = input.dir.replace("scss", "css")
+    const moduleName = input.file.replace(".scss", "")
+
+    await fs.outputFile(`${moduleDir}/${moduleName}.css`, output.css)
   }
 }
 
