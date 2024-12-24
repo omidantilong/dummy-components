@@ -1,14 +1,13 @@
 @use "./vars";
-@use "sass:map";
 
 .wrap {
   max-width: 79rem;
   margin: 0 1rem;
 
-  @media (min-width: map.get(vars.$breakpoints, "ml")) {
+  @media (min-width: $bp-ml) {
     margin: 0 1.5rem;
   }
-  @media (min-width: map.get(vars.$breakpoints, "xl")) {
+  @media (min-width: $bp-xl) {
     margin: 0 auto;
   }
 }
