@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/styles",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "it's a dummy styles package init",
   "publishConfig": {
     "access": "public"
