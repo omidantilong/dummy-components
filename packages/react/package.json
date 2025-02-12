@@ -1,6 +1,6 @@
 {
   "name": "@omidantilong/react",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "it's a dummy react package init",
   "type": "module",
   "main": "lib/index.js",
