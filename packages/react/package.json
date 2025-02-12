@@ -9,7 +9,8 @@
   },
   "private": false,
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "scripts": {
     "build": "node scripts/build.js",
